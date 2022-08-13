@@ -1,10 +1,11 @@
 # **TeeRexStore**
-#### Language: JavaScript
-#### Frame Work: Angular 14
-#### Style: SCSS
-#### Unit test: Jasmine Karma
+#### 🛡️ Language: JavaScript
+#### ⚙️ Frame Work: Angular 14
+#### 📱 Style: SCSS
+#### 🧪 Unit test: Jasmine Karma
+#### :octocat: GIT Repo: https://github.com/ajayc07/skillTest-TeeRexStore
+#### 💻 Live: https://ajayc07.github.io/teeRexStore/
 No additional libraries used.
-#### GIT Repo: https://github.com/ajayc07/skillTest-TeeRexStore
 
 ## How to run: 
 - Extract the Files
