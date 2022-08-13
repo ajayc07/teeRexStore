@@ -1,0 +1,37 @@
+<div class="title">
+    <h3>Cart</h3>
+</div>
+
+<div class="cart-container" [style.justifyContent]="!cartItem?.length && 'center'">
+
+    <ng-container *ngIf="cartItemCount">
+        <div class="cart">
+            <ng-container *ngFor="let item of cartItem">
+                <app-cart-item [cartItem]="item" (updateCart)="updateCartItemCount($event, item)"
+                    (deleteCart)="deleteCartItem(item.id)"></app-cart-item>
+            </ng-container>
+        </div>
+
+        <app-cart-summary [cartItemCount]="cartItemCount" [total]="total" [currencySymbol]="cartItem[0]?.currency">
+        </app-cart-summary>
+    </ng-container>
+
+    <ng-container *ngIf="!cartItemCount">
+        <div class="no-item-container">
+            <div class="message">
+
+                <div class="empty-cart">
+                    <img src="/assets/icons/cart-shopping-solid.svg" alt="">
+                </div>
+
+                <div>Oops! Your cart appears to be empty!</div>
+                <div>Try TeeRex T-shirt's today</div>
+            </div>
+
+            <div class="btn-container">
+                <button class="btn" routerLink="/product">SHOP NOW</button>
+            </div>
+        </div>
+    </ng-container>
+
+</div>

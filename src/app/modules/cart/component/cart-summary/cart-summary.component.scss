@@ -1,0 +1,92 @@
+
+:host{
+    @media screen and (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+.cart-summary {
+    width: 100%;
+    height: 400px;
+
+    box-sizing: border-box;
+    padding: 8px;
+
+    h2 {
+        margin: 12px;
+    }
+
+
+    @media screen and (min-width: 600px) {
+        width: 500px;
+        height: 500px;
+        margin-left: 24px;
+    }
+
+    .summary {
+        height: 100%;
+        box-sizing: border-box;
+        padding: 8px 8px 12px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        box-shadow: 0px 1px 2px 1px #afafaf;
+
+        ul {
+            padding: 12px;
+        }
+
+        li {
+            border-bottom: 1px solid #efefef;
+            height: 50px;
+            display: flex;
+            align-items: center;
+
+            &.key-value {
+                display: flex;
+                justify-content: space-between;
+
+                &.total {
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+
+.btn-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+
+    .btn {
+        width: 80%;
+        height: 50px;
+
+        &.outline {
+            height: 50px;
+            margin-left: 8px;
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+        flex-direction: column;
+        margin-top: 16px;
+
+        .btn {
+            height: 60px;
+            font-size: 1.2rem;
+
+            &.outline {
+                height: 60px;
+                margin-top: 12px;
+                margin-left: 0;
+            }
+        }
+    }
+}

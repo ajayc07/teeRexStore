@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url(./styles/_reset.scss);
+@import url(./styles/button.scss);
+@import url(./styles/checkbox.scss);
+@import url(./styles/scroll_bar.scss);
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8f8;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

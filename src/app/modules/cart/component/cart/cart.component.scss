@@ -1,0 +1,114 @@
+.title {
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding: 0 16px;
+
+    @media screen and (min-width: 600px) {
+        font-size: 1.2rem;
+    }
+}
+
+.cart-container {
+
+    width: 100%;
+    height: calc(100% - 50px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 600px) {
+        justify-content: center;
+        flex-direction: row;
+        height: calc(100% - 30px);
+    }
+
+    overflow: auto;
+
+    .cart {
+        width: 100%;
+
+        box-sizing: border-box;
+        padding: 8px;
+
+        @media screen and (min-width: 600px) {
+            max-width: 720px;
+            max-height: 80%;
+            overflow-y: auto;
+        }
+    }
+
+    .no-item-container {
+
+        .message {
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+            margin-bottom: 24px;
+            flex-direction: column;
+
+            .empty-cart {
+
+                width: 100px;
+                height: 100px;
+
+                position: relative;
+
+                &::before {
+                    content: "☹";
+                    width: 50px;
+                    height: 52px;
+                    position: absolute;
+                    border-radius: 50%;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    top: 0px;
+                    right: 20px;
+                    font-size: 2rem;
+                }
+            }
+
+            @media screen and (min-width: 600px) {
+                
+                font-size: 1.8rem;
+
+                .empty-cart {
+                    width: 200px;
+                    height: 200px;
+
+                    &::before {
+                        position: absolute;
+                        border-radius: 50%;
+                        color: white;
+                        top: 25px;
+                        right: 60px;
+                        font-size: 4.5rem;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.btn-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+
+    .btn {
+        
+        @media screen and (min-width: 600px) {
+            width: 80%;
+            height: 64px;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<header>
+    <div class="title"><h2 routerLink="/product">TeeRex Store</h2></div>
+    <ul class="routes">
+        <ng-container *ngFor="let routeItem of routeLinkConfig">
+            <li class="route-items" [routerLink]="routeItem.routeLink" routerLinkActive="active">
+                <img [src]="routeItem.imgSrc" alt="" srcset="">
+                <span class="route-label">{{routeItem.displayName}}</span>
+                <div *ngIf="routeItem.displayName == 'Cart' && cartItemCount" class="cart-item-count">{{cartItemCount}}</div>
+            </li>
+        </ng-container>
+    </ul>
+</header>

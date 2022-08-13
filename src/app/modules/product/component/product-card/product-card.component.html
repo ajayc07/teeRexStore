@@ -1,0 +1,26 @@
+<div class="card-container">
+    <div class="img-container">
+        <img class="img-preview" [src]="productData?.imageURL" [alt]="productData?.name">
+    </div>
+    <div class="desc-container">
+        <div class="product-desc">
+            <div class="name-desc">
+                <div class="name">{{productData?.name}}</div>
+                <div class="desc">{{productData?.gender+"'s "+productData?.type}}</div>
+            </div>
+            <div class="price">{{productData?.price | currency:productData?.currency}}</div>
+        </div>
+        <div class="variant">
+            <!-- <div class="variant-name">color</div> -->
+            <div class="variant-value">
+               <div [style.backgroundColor]="productData?.color" class="color-box"></div> 
+               <div class="value">{{productData?.color}}</div>
+            </div>
+        </div>
+        <div class="btn-container">
+            <div class="info" *ngIf="(remainingStock && remainingStock <= 2) ">Only {{remainingStock}} left in stock</div>
+            <div class="info" *ngIf="!remainingStock">Out of stock</div>
+            <button class="btn" [class.disabled]="!remainingStock" (click)="addToCart()">ADD TO CART</button>
+        </div>
+    </div>
+</div>

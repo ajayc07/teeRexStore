@@ -1,0 +1,86 @@
+header {
+    height: 64px;
+    width: 100%;
+    background-color: white;
+    box-shadow: inset 3px 0px 2px 2px #f8f8f8;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding: 8px;
+
+    .title {
+        cursor: pointer;
+    }
+
+    .routes {
+        display: flex;
+
+        .route-items {
+            display: flex;
+            align-items: center;
+            margin-right: 16px;
+            cursor: pointer;
+            // width: 100px;
+            position: relative;
+
+
+            img {
+                display: block;
+                width: 30px;
+                height: 30px;
+            }
+
+            .cart-item-count {
+                position: absolute;
+                top: -16px;
+                right: 25px;
+                width: 25px;
+                height: 25px;
+                background: rgba(128, 128, 128, 0.9);
+                border: 1px solid white;
+                color: white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .route-label {
+                padding-left: 8px;
+            }
+
+            @media screen and (max-width: 600px) {
+                .route-label {
+                    display: none;
+                }
+
+                .cart-item-count {
+                    top: -12px;
+                    right: -12px;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+
+        .active {
+
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            &::before {
+                content: '';
+                height: 3px;
+                background-color: black;
+                position: absolute;
+                bottom: -8px;
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+}

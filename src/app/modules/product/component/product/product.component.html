@@ -1,0 +1,43 @@
+<section>
+    <aside class="filter-container" [ngClass]="showFilter ? 'show-filter' : 'hide-filter'">
+        <app-filters [itemCount]="displayList.length" [filterFactors]="filterFactors" [showFilter]="showFilter"
+            (applyFilterValues)="applyFilter($event.filterValues, $event.filterCount)"
+            (clearFilterValues)="resetFilter()" (hideFilter)="showFilter = !showFilter"
+            [resetFilter]="doResetFilter"></app-filters>
+    </aside>
+
+    <section class="product-list">
+
+        <div class="search-container">
+
+            <app-search (search)="searchByKeyWord($event)" [searchValue]="searchValue"></app-search>
+
+            <div class="filter-btn">
+                <button (click)="showFilter = !showFilter">
+                    Filter
+                    <span [ngClass]="showFilter ? 'show-filter-entity' : 'hide-filter-entity'">
+                        <span *ngIf="filterCount">({{filterCount}})</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <div class="product-container" [class.restrict-action]="showFilter">
+            <ng-container *ngFor="let product of displayList">
+                <app-product-card [productData]="product" (addToCartEvent)="addToCart(product)"></app-product-card>
+            </ng-container>
+
+            <ng-container *ngIf="!displayList?.length">
+  
+                <div class="no-item-found">
+                    <h1>{{ !showError ? 'No Product Found' : 'Something went wrong'}}</h1>
+                    <h2>{{ !showError ?  'Search / filter did not match any product.' : 'Please try again'}}</h2>
+                    <h2 *ngIf="!showError">Please try again</h2>
+                    <button *ngIf="showError" class="btn" (click)="setupData()">TRY AGAIN</button>
+                </div>
+
+            </ng-container>
+        </div>
+    </section>
+
+</section>

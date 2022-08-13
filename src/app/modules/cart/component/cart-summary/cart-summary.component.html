@@ -1,0 +1,24 @@
+<div class="cart-summary">
+    <div class="summary">
+        <h2> Order Summary</h2>
+        <ul>
+            <li>{{cartItemCount}} Products</li>
+            <li class="key-value">
+                <div class="title">Product total</div>
+                <div class="value">{{total| currency:currencySymbol}}</div>
+            </li>
+            <li class="key-value">
+                <div class="title">Delivery</div>
+                <div class="value">Free</div>
+            </li>
+            <li class="key-value total">
+                <div class="title">Total</div>
+                <div class="value">{{total | currency:currencySymbol}}</div>
+            </li>
+        </ul>
+        <div class="btn-container">
+            <button class="btn">PAY NOW</button>
+            <button class="btn outline" routerLink="/product">CONTINUE SHOPPING</button>
+        </div>
+    </div>
+</div>

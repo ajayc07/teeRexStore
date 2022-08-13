@@ -1,0 +1,5 @@
+<div class="search-container">
+    <input type="text" class="search" [(ngModel)]="searchValue" placeholder="Search for products"
+    (input)="emitSearch($event)">
+    <span class="close" (click)="emitSearch('')" *ngIf="searchValue"></span>
+</div>

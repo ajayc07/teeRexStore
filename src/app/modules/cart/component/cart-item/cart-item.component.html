@@ -1,0 +1,31 @@
+<div class="cart-item">
+    <div class="img-container">
+        <img [src]="cartItem?.imageURL" height="100%" width="auto">
+    </div>
+
+    <div class="product-desc">
+        <div class="name-price">
+            <div class="name">{{cartItem?.name}}</div>
+            <div class="price">{{cartItem?.price | currency:cartItem?.currency}}</div>
+        </div>
+
+        <div class="qty-container">
+
+            <div class="qty">
+                <div class="qty-btn" [class.disabled]="(cartItem?.cartAddedQuantity) == 1" (click)="updateItemCount(false)">-
+                </div>
+
+                <div class="qty-value">{{cartItem?.cartAddedQuantity}}</div>
+                
+                <div class="qty-btn" [class.disabled]="cartItem?.cartAddedQuantity === cartItem?.quantity"
+                    (click)="updateItemCount(true)">+</div>
+            </div>
+
+            <div class="btn-container">
+                <button class="btn outline" (click)="deleteCartItem()" >DELETE</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>

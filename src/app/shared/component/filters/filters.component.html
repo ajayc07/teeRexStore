@@ -1,0 +1,35 @@
+<div class="filter-full-container">
+    <div class="filter-container">
+
+        <div class="close">
+            <button class="btn" (click)="hideFilterEmitter()">Close</button>
+        </div>
+        
+        <ng-container *ngFor="let item of filterFactors | keyvalue">
+            <section>
+                <div class="filter-title">{{item.key | titlecase}}</div>
+
+                <ul class="filter-values">
+                    <li *ngFor="let filterItem of item?.value">
+
+                        <label [for]="'filter-'+ filterItem" class="container">
+                            {{item.key !== 'price' ? filterItem : ((filterItem[0]|currency:'INR' : 'symbol' : '1.0-0')
+                            +' - '+ (filterItem[1]|currency:'INR': 'symbol' : '1.0-0'))}}
+
+                            <input type="checkbox" [name]="filterItem" [id]="'filter-'+ filterItem"
+                                (change)="updateFilter($event.target, filterItem, item.key)">
+                            <span class="checkmark"></span>
+                            
+                        </label>
+
+                    </li>
+                </ul>
+            </section>
+        </ng-container>
+
+        <div class="btn-container">
+            <div class="count">Showing {{itemCount}} item</div>
+            <button class="btn" *ngIf="filterCount" (click)="clearFilter()">CLEAR FILTER</button>
+        </div>
+    </div>
+</div>
