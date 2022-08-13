@@ -11,7 +11,7 @@
     .close {
         position: relative;
         top: 5px;
-        background: url(/assets/icons/circle-xmark-solid.svg) no-repeat;
+        background: url('^./assets/icons/circle-xmark-solid.svg') no-repeat;
         background-size: 18px 18px;
         width: 18px;
         height: 18px;
@@ -35,7 +35,7 @@ input {
         width: 80%;
         text-indent: 20px;
         line-height: 2;
-        background: url(/assets/icons/magnifying-glass-solid.svg) no-repeat;
+        background: url('^./assets/icons/magnifying-glass-solid.svg') no-repeat;
         background-size: 18px 18px;
         background-position: left center;
 

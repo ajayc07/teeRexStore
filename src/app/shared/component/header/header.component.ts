@@ -13,12 +13,12 @@ export class HeaderComponent implements OnInit {
   public routeLinkConfig = [
     {
       displayName: 'Product',
-      imgSrc:'/assets/icons/shirt-solid.svg',
+      imgSrc:'./assets/icons/shirt-solid.svg',
       routeLink: '/product'
     },
     {
       displayName: 'Cart',
-      imgSrc:'/assets/icons/cart-shopping-solid.svg',
+      imgSrc:'./assets/icons/cart-shopping-solid.svg',
       routeLink: '/cart'
     },
   ];

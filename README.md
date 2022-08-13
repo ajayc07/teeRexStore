@@ -97,8 +97,9 @@ Navigation section will have 2 page route links
 
 Cart icon will indicate number of cart items present.
 
-<img src="./screenshot%20and%20designs/cart-no-item.jpg" width="90px" height="55px">
-<img src="./screenshot%20and%20designs/cart-has-item.jpg" width="90px" height="55px">
+| *Empty cart* | *Cart with an item* 
+|:-----:|:-----:|
+|<img src="./screenshot%20and%20designs/cart-no-item.jpg" width="90px" height="55px"> | <img src="./screenshot%20and%20designs/cart-has-item.jpg" width="90px" height="55px">
 
 ### *Filter Component*
 Filter component enables the apply filter values of attribute like color, gender, price range, type.  
